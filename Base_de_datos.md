@@ -2,7 +2,7 @@
 # TRABAJOS AUTÓNOMOS
 
 ## UNIDAD 1
-- Diagramas de Relacion(
+- Diagramas de Relacion(AA Ejercicios (1).pdf)
 
 ## UNIDAD 2
 
