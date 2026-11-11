@@ -12,11 +12,11 @@ De los camiones que llevan los camioneros, interesa conocer la matrícula, model
 
 ### Diagrama Entidad-Relación
 
-![Ejercicio 8 - Diagrama Entidad-Relación](../imagenes/ejercicio8_entidad_relacion.png)
+![Ejercicio 8 - Diagrama Entidad-Relación](../imageness/ejercicio8_entidad_relacion.png)
 
 ### Diagrama Relacional
 
-![Ejercicio 8 - Diagrama Relacional](../imagenes/ejercicio8_relacional.png)
+![Ejercicio 8 - Diagrama Relacional](../imageness/ejercicio8_relacional.png)
 
 ### Código SQL
 
