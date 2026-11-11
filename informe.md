@@ -1,25 +1,5 @@
-# INFORME DE FIN DE UNIDAD
 
-**FEIRNNR - Carrera de Computación — Universidad Nacional de Loja**
-
-## Datos Generales
-
-| Campo | Detalle |
-|---|---|
-| **Asignatura** | Base de datos |
-| **Ciclo** | 3 A |
-| **Unidad** | 1 |
-| **Resultado de aprendizaje de la unidad** | Modela bases de datos de problemas reales, bajo los principios de solidaridad, transparencia, responsabilidad y honestidad. |
-| **Nombre del Docente** | Edwin René Guamán Quinche |
-| **Fecha** | |
-| **Enlace de Git** | |
-| **Nombres y apellidos del estudiantes** | Irvin Alexey Armijos Guerra |
-
----
-
-## 1. TITULO
-
-Diseño e Implementación de un Sistema de Base de Datos relacional para la Gestión Operativa y Control de Inventarios de un Taller Mecánico Automotriz
+## 1.Diseño e Implementación de un Sistema de Base de Datos relacional para la Gestión Operativa y Control de Inventarios de un Taller Mecánico Automotriz
 
 ## 2. CONTEXTO DEL PROBLEMA
 
@@ -407,16 +387,4 @@ Se buscan las órdenes que usaron todos los repuestos del proveedor 4 (el filtro
 - Escribir el código DDL y DML en MySQL permitió ver cómo el modelo se convierte en una base de datos que funciona. Las restricciones PRIMARY KEY y FOREIGN KEY garantizan la integridad referencial: no se puede registrar un vehículo de un cliente que no existe ni insertar datos en un orden incorrecto, por lo que las tablas padre se cargan antes que las hijas. Las restricciones NOT NULL, UNIQUE, DEFAULT y CHECK, como la que limita el estado de una orden a PENDIENTE, EN_PROCESO, FINALIZADO o ENTREGADO, llevan las reglas del taller a la base de datos y evitan datos inválidos desde el origen. También fue relevante elegir el tipo de dato adecuado, por ejemplo DECIMAL para los montos de dinero, y definir las acciones ON DELETE y ON UPDATE en cada clave foránea. Con esto se cumple el segundo objetivo específico.
 - El álgebra relacional ayudó a plantear cada consulta paso a paso antes de escribirla en SQL: primero qué tablas se reúnen, luego qué filas se seleccionan y al final qué columnas se muestran. Cada operador tiene un equivalente directo: la selección corresponde a WHERE, la proyección a SELECT, la reunión natural a JOIN y la diferencia a NOT IN o NOT EXISTS. La división no tiene equivalente directo en MySQL y se resolvió con un doble NOT EXISTS, lo que hizo evidente la diferencia entre el álgebra formal y el lenguaje SQL. Las consultas más útiles para el taller fueron las que combinan varias tablas, como saber qué mecánico atendió qué vehículo, y las de diferencia y división, que permiten detectar casos como los mecánicos sin órdenes en proceso o las órdenes que usaron todos los repuestos de un proveedor. Probar las consultas con datos de ejemplo permitió comprobar que los resultados eran los esperados.
 
-## BIBLIOGRAFÍA
 
-[1] P. P.-S. Chen, "The entity-relationship model—toward a unified view of data," ACM Trans. Database Syst., vol. 1, no. 1, pp. 9–36, Mar. 1976.
-
-[2] E. F. Codd, "A relational model of data for large shared data banks," Commun. ACM, vol. 13, no. 6, pp. 377–387, Jun. 1970.
-
-[3] R. Elmasri and S. B. Navathe, Fundamentals of Database Systems, 7th ed. Hoboken, NJ, USA: Pearson, 2016.
-
-[4] A. Silberschatz, H. F. Korth, and S. Sudarshan, Database System Concepts, 7th ed. New York, NY, USA: McGraw-Hill, 2019.
-
-[5] Oracle Corporation, "MySQL 8.0 Reference Manual." [Online]. Available: <https://dev.mysql.com/doc/refman/8.0/en/> (accessed Nov. 9, 2026).
-
-[6] S. Tomaselli, "Relational: educational tool for relational algebra." [Online]. Available: <https://ltworf.codeberg.page/relational/> (accessed Nov. 9, 2026).
