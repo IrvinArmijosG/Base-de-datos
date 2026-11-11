@@ -8,11 +8,11 @@ Los pacientes solicitan citas; cada cita la atiende un médico a un paciente en 
 
 ### Diagrama Entidad-Relación
 
-![Ejercicio 3 - Diagrama Entidad-Relación](../imagenes/ejercicio3_entidad_relacion.png)
+![Ejercicio 3 - Diagrama Entidad-Relación](../imageness/ejercicio3_entidad_relacion.png)
 
 ### Diagrama Relacional
 
-![Ejercicio 3 - Diagrama Relacional](../imagenes/ejercicio3_relacional.png)
+![Ejercicio 3 - Diagrama Relacional](../imageness/ejercicio3_relacional.png)
 
 ### Código SQL
 
