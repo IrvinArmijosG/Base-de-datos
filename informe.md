@@ -1,53 +1,96 @@
+<div align="center">
 
-## 1.Diseño e Implementación de un Sistema de Base de Datos relacional para la Gestión Operativa y Control de Inventarios de un Taller Mecánico Automotriz
+# 🔧 1. Diseño e Implementación de un Sistema de Base de Datos relacional para la Gestión Operativa y Control de Inventarios de un Taller Mecánico Automotriz
 
-## 2. CONTEXTO DEL PROBLEMA
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![SQL](https://img.shields.io/badge/SQL-DDL%20%2F%20DML-orange?style=for-the-badge)
+![Modelo E-R](https://img.shields.io/badge/Modelo-Entidad--Relaci%C3%B3n-1f6feb?style=for-the-badge)
+![Algebra](https://img.shields.io/badge/%C3%81lgebra-Relacional-8957e5?style=for-the-badge)
+
+</div>
+
+---
+
+## 📑 Contenido
+
+| | Sección |
+|:-:|:--|
+| 2 | [Contexto del problema](#contexto) |
+| 3 | [Objetivos](#objetivos) |
+| 4 | [Modelos conceptuales de bases de datos](#modelos) |
+| 5 | [Código SQL](#sql) |
+| 🔍 | [Consultas de álgebra relacional y traducción a SQL](#consultas) |
+| ✅ | [Conclusiones](#conclusiones) |
+| 📚 | [Bibliografía](#bibliografia) |
+
+---
+
+<a id="contexto"></a>
+## 🧩 2. CONTEXTO DEL PROBLEMA
 
 El taller mecánico automotriz enfrenta una alta demanda de servicios que se gestiona mediante registros manuales y hojas de cálculo aisladas. Esta falta de digitalización genera duplicidad de datos, escasa trazabilidad en las reparaciones, descontrol en el inventario de repuestos y errores frecuentes en la facturación.
 
 Esta problemática afecta directamente a los clientes con tiempos de espera prolongados, a los mecánicos con desorganización operativa, y a la administración con pérdida de control financiero y de stock. Para solucionar esto, es fundamental gestionar de manera estructurada e interrelacionada la información de clientes, vehículos, mecánicos, órdenes de trabajo, servicios, repuestos y pagos, garantizando la integridad de los datos y mejorando la eficiencia general del taller.
 
-## 3. OBJETIVOS
+---
 
-### 3.1. Objetivo General
+<a id="objetivos"></a>
+## 🎯 3. OBJETIVOS
+
+### 🏁 3.1. Objetivo General
 
 Diseñar e implementar una base de datos relacional para la gestión integral de un taller mecánico automotriz mediante el modelado Entidad-Relación y su esquema relacional, con el fin de optimizar el control de clientes, vehículos, órdenes de trabajo, inventario de repuestos y facturación.
 
-### 3.2. Objetivos Específicos
+### 📌 3.2. Objetivos Específicos
 
 - Elaborar el modelado conceptual y lógico de la base de datos mediante el diagrama Entidad-Relación (notación Chen) y el esquema relacional, identificando con precisión las entidades, atributos, claves primarias, claves foráneas y cardinalidades requeridas para el taller mecánico.
 - Validar la base de datos mediante cinco consultas formuladas en álgebra relacional y traducidas a SQL, que empleen selección, proyección, reunión natural, diferencia y división.
 
-## 4. MODELOS CONCEPTUALES DE BASES DE DATOS
+---
 
-### 4.1. Modelo Entidad-Relación
+<a id="modelos"></a>
+## 🗺️ 4. MODELOS CONCEPTUALES DE BASES DE DATOS
 
-
-<img width="5744" height="3464" alt="fig1_diagrama_er (1)" src="https://github.com/user-attachments/assets/1b497ca0-a513-4421-990a-73ed8fbd75e8" />
-
-
-*Figura 1. Diagrama Entidad-Relación del Sistema de Base de Datos relacional para la Gestión Operativa y Control de Inventarios de un Taller Mecánico Automotriz*
-
-### 4.2. Modelo Relacional
-
-<img width="5752" height="2488" alt="fig2_modelo_relacional (1)" src="https://github.com/user-attachments/assets/3bc7ad8f-447c-4dd0-b70b-d23a8533c195" />
+### 🔗 4.1. Modelo Entidad-Relación
 
 
+<p align="center">
+  <a href="https://github.com/user-attachments/assets/1b497ca0-a513-4421-990a-73ed8fbd75e8">
+    <img src="https://github.com/user-attachments/assets/1b497ca0-a513-4421-990a-73ed8fbd75e8" alt="Figura 1. Diagrama Entidad-Relación" width="100%">
+  </a>
+</p>
 
-*Figura 2. Modelo relacional del Sistema de Base de Datos relacional para la Gestión Operativa y Control de Inventarios de un Taller Mecánico Automotriz*
+
+<p align="center"><sub><i>Figura 1. Diagrama Entidad-Relación del Sistema de Base de Datos relacional para la Gestión Operativa y Control de Inventarios de un Taller Mecánico Automotriz</i></sub></p>
+
+### 🗃️ 4.2. Modelo Relacional
+
+<p align="center">
+  <a href="https://github.com/user-attachments/assets/3bc7ad8f-447c-4dd0-b70b-d23a8533c195">
+    <img src="https://github.com/user-attachments/assets/3bc7ad8f-447c-4dd0-b70b-d23a8533c195" alt="Figura 2. Modelo relacional" width="100%">
+  </a>
+</p>
+
+
+<p align="center"><sub><i>Figura 2. Modelo relacional del Sistema de Base de Datos relacional para la Gestión Operativa y Control de Inventarios de un Taller Mecánico Automotriz</i></sub></p>
 
 ---
 
-## CÓDIGO SQL
+<a id="sql"></a>
+## 💾 CÓDIGO SQL
 
-### 5.1. Creación de Tablas (DDL)
+### 🏗️ 5.1. Creación de Tablas (DDL)
 
 Presentación del código SQL que incluye:
+
 
 - Sentencia CREATE TABLE con nombre de tabla en mayusculas o siguiendo la convencion del equipo.
 - Definicion de columnas con tipos de datos apropiados (INT, VARCHAR, DATE, DECIMAL, etc.).
 - Restricciones: PRIMARY KEY, NOT NULL, UNIQUE, DEFAULT, CHECK.
 - Claves foraneas con FOREIGN KEY ... REFERENCES para mantener la integridad referencial.
+
+<details open>
+<summary><b>📄 Ver / ocultar código DDL completo</b></summary>
 
 ```sql
 -- SISTEMA DE TALLER MECANICO
@@ -201,7 +244,12 @@ CREATE TABLE REPUESTO_UTILIZADO (
 );
 ```
 
-### 5.2. Inserción de Datos (DML)
+</details>
+
+### 📥 5.2. Inserción de Datos (DML)
+
+<details open>
+<summary><b>📄 Ver / ocultar código DML completo</b></summary>
 
 ```sql
 -- --  SISTEMA DE TALLER MECANICO
@@ -321,27 +369,34 @@ VALUES
 
 ```
 
+</details>
 
 
 ---
 
-## CONSULTA DE ÁLGEBRA RELACIONAL Y TRADUCIR A SQL
+<a id="consultas"></a>
+## 🔍 CONSULTA DE ÁLGEBRA RELACIONAL Y TRADUCIR A SQL
 
-***Operadores del algebra relacional a utilizar:*** *Seleccion (sigma), Proyeccion (pi), Union, Interseccion, Diferencia, Producto cartesiano, Reunion natural (JOIN), Division. Cada consulta debe usar al menos un operador diferente.*
+> ***Operadores del algebra relacional a utilizar:*** *Seleccion (sigma), Proyeccion (pi), Union, Interseccion, Diferencia, Producto cartesiano, Reunion natural (JOIN), Division. Cada consulta debe usar al menos un operador diferente.*
 
-### Consulta 1
+
+### 🔎 Consulta 1
 
 Obtener los nombres de los clientes y los datos de sus vehículos que tengan un kilometraje superior a 80.000 km y que hayan ingresado al taller durante el año 2026.
 
-**Álgebra Relacional:**
+#### 📐 Álgebra Relacional
 
 ```
 π primer_nombre, apellido_paterno, placa, marca, modelo, anio, kilometraje (σ kilometraje > 80000 and fecha_ingreso.year == 2026 (cliente ⋈ vehiculo ⋈ orden_trabajo))
 ```
 
-![Consulta 1 - resultado en el programa de relational algebra](imagenes/c1_resultado_dbeaver.png)
+<p align="center">
+  <a href="imagenes/c1_resultado_dbeaver.png">
+    <img src="imagenes/c1_resultado_dbeaver.png" alt="Consulta 1 - resultado en el programa de relational algebra" width="100%">
+  </a>
+</p>
 
-**SQL:**
+#### 🧮 SQL
 
 ```sql
 SELECT c.primer_nombre, c.apellido_paterno,
@@ -353,23 +408,33 @@ WHERE v.kilometraje > 80000
   AND YEAR(o.fecha_ingreso) = 2026;
 ```
 
-Se obtienen los clientes con sus vehículos que superan los 80.000 km y que ingresaron al taller en 2026. Se filtran filas con dos condiciones y se muestran 7 columnas (nombre, apellido, placa, marca, modelo, año y kilometraje).
+> 💡 Se obtienen los clientes con sus vehículos que superan los 80.000 km y que ingresaron al taller en 2026. Se filtran filas con dos condiciones y se muestran 7 columnas (nombre, apellido, placa, marca, modelo, año y kilometraje).
 
-![Consulta 1 - resultado en terminal MySQL](imagenes/c1_resultado_terminal.png)
+<p align="center">
+  <a href="imagenes/c1_resultado_terminal.png">
+    <img src="imagenes/c1_resultado_terminal.png" alt="Consulta 1 - resultado en terminal MySQL" width="100%">
+  </a>
+</p>
 
-### Consulta 2
+---
+
+### 🔎 Consulta 2
 
 Obtener los nombres, apellidos y especialidades de los mecánicos, junto con las placas y modelos de los vehículos en cuyas órdenes de trabajo han participado.
 
-**Álgebra Relacional:**
+#### 📐 Álgebra Relacional
 
 ```
 π nombre, apellido, especialidad, placa, modelo (mecanico ⋈ atiende ⋈ orden_trabajo ⋈ vehiculo)
 ```
 
-![Consulta 2 - resultado en el programa de relational algebra](imagenes/c2_resultado_dbeaver.png)
+<p align="center">
+  <a href="imagenes/c2_resultado_dbeaver.png">
+    <img src="imagenes/c2_resultado_dbeaver.png" alt="Consulta 2 - resultado en el programa de relational algebra" width="100%">
+  </a>
+</p>
 
-**SQL:**
+#### 🧮 SQL
 
 ```sql
 SELECT m.nombre, m.apellido, m.especialidad, v.placa, v.modelo
@@ -379,23 +444,33 @@ JOIN ORDEN_TRABAJO o ON o.id_orden = a.id_orden
 JOIN VEHICULO v      ON v.placa = o.placa;
 ```
 
-Se obtiene un listado de cada mecánico con los vehículos de las órdenes en que participó. Solo se muestran 5 columnas: nombre, apellido, especialidad, placa y modelo. Salen 8 filas, una por cada participación de un mecánico en una orden. Un mismo mecánico puede repetirse con distintos vehículos (Carlos Mendoza aparece con LBA-1234, LAB-9012 y LGH-7890).
+> 💡 Se obtiene un listado de cada mecánico con los vehículos de las órdenes en que participó. Solo se muestran 5 columnas: nombre, apellido, especialidad, placa y modelo. Salen 8 filas, una por cada participación de un mecánico en una orden. Un mismo mecánico puede repetirse con distintos vehículos (Carlos Mendoza aparece con LBA-1234, LAB-9012 y LGH-7890).
 
-![Consulta 2 - resultado en terminal MySQL](imagenes/c2_resultado_terminal.png)
+<p align="center">
+  <a href="imagenes/c2_resultado_terminal.png">
+    <img src="imagenes/c2_resultado_terminal.png" alt="Consulta 2 - resultado en terminal MySQL" width="100%">
+  </a>
+</p>
 
-### Consulta 3
+---
+
+### 🔎 Consulta 3
 
 Obtener los clientes que poseen vehículos de marca Chevrolet o Toyota, mostrando sus nombres, apellidos y placas de sus vehículos.
 
-**Álgebra Relacional:**
+#### 📐 Álgebra Relacional
 
 ```
 π primer_nombre, apellido_paterno, placa (σ marca == "Chevrolet" or marca == "Toyota" (cliente ⋈ vehiculo))
 ```
 
-![Consulta 3 - resultado en el programa de relational algebra](imagenes/c3_resultado_dbeaver.png)
+<p align="center">
+  <a href="imagenes/c3_resultado_dbeaver.png">
+    <img src="imagenes/c3_resultado_dbeaver.png" alt="Consulta 3 - resultado en el programa de relational algebra" width="100%">
+  </a>
+</p>
 
-**SQL:**
+#### 🧮 SQL
 
 ```sql
 SELECT c.primer_nombre, c.apellido_paterno, v.placa
@@ -404,23 +479,33 @@ JOIN VEHICULO v ON v.id_cliente = c.id_cliente
 WHERE v.marca = 'Chevrolet' OR v.marca = 'Toyota';
 ```
 
-Se obtienen solo los clientes cuyo vehículo es Chevrolet o Toyota, mostrando únicamente 3 columnas (primer_nombre, apellido_paterno y placa).
+> 💡 Se obtienen solo los clientes cuyo vehículo es Chevrolet o Toyota, mostrando únicamente 3 columnas (primer_nombre, apellido_paterno y placa).
 
-![Consulta 3 - resultado en terminal MySQL](imagenes/c3_resultado_terminal.png)
+<p align="center">
+  <a href="imagenes/c3_resultado_terminal.png">
+    <img src="imagenes/c3_resultado_terminal.png" alt="Consulta 3 - resultado en terminal MySQL" width="100%">
+  </a>
+</p>
 
-### Consulta 4
+---
+
+### 🔎 Consulta 4
 
 Identificar los mecánicos que han participado en órdenes de trabajo, pero que nunca han atendido órdenes cuyo estado sea EN_PROCESO.
 
-**Álgebra Relacional:**
+#### 📐 Álgebra Relacional
 
 ```
 π id_mecanico, nombre, apellido, especialidad (((π id_mecanico (atiende)) - (π id_mecanico (atiende ⋈ σ estado == "EN_PROCESO" (orden_trabajo)))) ⋈ mecanico)
 ```
 
-![Consulta 4 - resultado en el programa de relational algebra](imagenes/c4_resultado_dbeaver.png)
+<p align="center">
+  <a href="imagenes/c4_resultado_dbeaver.png">
+    <img src="imagenes/c4_resultado_dbeaver.png" alt="Consulta 4 - resultado en el programa de relational algebra" width="100%">
+  </a>
+</p>
 
-**SQL:**
+#### 🧮 SQL
 
 ```sql
 SELECT m.id_mecanico, m.nombre, m.apellido, m.especialidad
@@ -433,23 +518,33 @@ AND m.id_mecanico NOT IN (
   WHERE o.estado = 'EN_PROCESO');
 ```
 
-Se combinan las tablas ATIENDE, ORDEN_TRABAJO y MECANICO. Primero se toman todos los mecánicos que han participado en alguna orden, y luego se descartan los que participaron en órdenes EN_PROCESO (las órdenes 3 y 5, atendidas por los mecánicos 1, 3 y 4).
+> 💡 Se combinan las tablas ATIENDE, ORDEN_TRABAJO y MECANICO. Primero se toman todos los mecánicos que han participado en alguna orden, y luego se descartan los que participaron en órdenes EN_PROCESO (las órdenes 3 y 5, atendidas por los mecánicos 1, 3 y 4).
 
-![Consulta 4 - resultado en terminal MySQL](imagenes/c4_resultado_terminal.png)
+<p align="center">
+  <a href="imagenes/c4_resultado_terminal.png">
+    <img src="imagenes/c4_resultado_terminal.png" alt="Consulta 4 - resultado en terminal MySQL" width="100%">
+  </a>
+</p>
 
-### Consulta 5
+---
+
+### 🔎 Consulta 5
 
 Identificar las órdenes de trabajo en las que se utilizaron todos los repuestos que suministra el proveedor "Lubricantes Andinos", mostrando el número de orden y la placa del vehículo.
 
-**Álgebra Relacional:**
+#### 📐 Álgebra Relacional
 
 ```
 π id_orden, placa (((π id_orden, id_repuesto (repuesto_utilizado)) ÷ (π id_repuesto (σ id_proveedor == 4 (repuesto)))) ⋈ orden_trabajo)
 ```
 
-![Consulta 5 - resultado en el programa de relational algebra](imagenes/c5_resultado_dbeaver.png)
+<p align="center">
+  <a href="imagenes/c5_resultado_dbeaver.png">
+    <img src="imagenes/c5_resultado_dbeaver.png" alt="Consulta 5 - resultado en el programa de relational algebra" width="100%">
+  </a>
+</p>
 
-**SQL:**
+#### 🧮 SQL
 
 ```sql
 SELECT o.id_orden, o.placa
@@ -465,19 +560,31 @@ WHERE NOT EXISTS (
     AND ru.id_repuesto = r.id_repuesto));
 ```
 
-Se buscan las órdenes que usaron todos los repuestos del proveedor 4 (el filtro de aceite y el aceite 10W-40). Solo la orden 1 los usó a ambos; la orden 5 usó el aceite pero no el filtro, así que queda fuera.
+> 💡 Se buscan las órdenes que usaron todos los repuestos del proveedor 4 (el filtro de aceite y el aceite 10W-40). Solo la orden 1 los usó a ambos; la orden 5 usó el aceite pero no el filtro, así que queda fuera.
 
-![Consulta 5 - resultado en terminal MySQL](imagenes/c5_resultado_terminal.png)
+<p align="center">
+  <a href="imagenes/c5_resultado_terminal.png">
+    <img src="imagenes/c5_resultado_terminal.png" alt="Consulta 5 - resultado en terminal MySQL" width="100%">
+  </a>
+</p>
 
 ---
 
-## CONCLUSIONES
+<a id="conclusiones"></a>
+## ✅ CONCLUSIONES
 
-- El modelado conceptual permitió pasar de la descripción del problema del taller a una estructura formal de entidades, atributos y relaciones. Al elaborar el diagrama E-R en notación Chen se comprendió que no todo dato es una entidad: el teléfono del cliente resultó ser un atributo multivalor, el total de la orden y el subtotal del detalle son atributos derivados que se calculan y no se almacenan, y Detalle de Servicio y Repuesto Utilizado dependen de la orden de trabajo, por lo que se modelaron como entidades débiles. La mayor dificultad estuvo en definir las cardinalidades, en especial la relación entre mecánicos y órdenes, que al ser de muchos a muchos exigió una tabla intermedia (ATIENDE) en el modelo relacional. Pasar del E-R al esquema relacional mostró que cada decisión de diseño se traduce en claves primarias, claves foráneas y tablas concretas, lo que cumple el primer objetivo específico.
-- Escribir el código DDL y DML en MySQL permitió ver cómo el modelo se convierte en una base de datos que funciona. Las restricciones PRIMARY KEY y FOREIGN KEY garantizan la integridad referencial: no se puede registrar un vehículo de un cliente que no existe ni insertar datos en un orden incorrecto, por lo que las tablas padre se cargan antes que las hijas. Las restricciones NOT NULL, UNIQUE, DEFAULT y CHECK, como la que limita el estado de una orden a PENDIENTE, EN_PROCESO, FINALIZADO o ENTREGADO, llevan las reglas del taller a la base de datos y evitan datos inválidos desde el origen. También fue relevante elegir el tipo de dato adecuado, por ejemplo DECIMAL para los montos de dinero, y definir las acciones ON DELETE y ON UPDATE en cada clave foránea. Con esto se cumple el segundo objetivo específico.
-- El álgebra relacional ayudó a plantear cada consulta paso a paso antes de escribirla en SQL: primero qué tablas se reúnen, luego qué filas se seleccionan y al final qué columnas se muestran. Cada operador tiene un equivalente directo: la selección corresponde a WHERE, la proyección a SELECT, la reunión natural a JOIN y la diferencia a NOT IN o NOT EXISTS. La división no tiene equivalente directo en MySQL y se resolvió con un doble NOT EXISTS, lo que hizo evidente la diferencia entre el álgebra formal y el lenguaje SQL. Las consultas más útiles para el taller fueron las que combinan varias tablas, como saber qué mecánico atendió qué vehículo, y las de diferencia y división, que permiten detectar casos como los mecánicos sin órdenes en proceso o las órdenes que usaron todos los repuestos de un proveedor. Probar las consultas con datos de ejemplo permitió comprobar que los resultados eran los esperados.
+> 1️⃣ El modelado conceptual permitió pasar de la descripción del problema del taller a una estructura formal de entidades, atributos y relaciones. Al elaborar el diagrama E-R en notación Chen se comprendió que no todo dato es una entidad: el teléfono del cliente resultó ser un atributo multivalor, el total de la orden y el subtotal del detalle son atributos derivados que se calculan y no se almacenan, y Detalle de Servicio y Repuesto Utilizado dependen de la orden de trabajo, por lo que se modelaron como entidades débiles. La mayor dificultad estuvo en definir las cardinalidades, en especial la relación entre mecánicos y órdenes, que al ser de muchos a muchos exigió una tabla intermedia (ATIENDE) en el modelo relacional. Pasar del E-R al esquema relacional mostró que cada decisión de diseño se traduce en claves primarias, claves foráneas y tablas concretas, lo que cumple el primer objetivo específico.
 
-# Bibliografia
+> 2️⃣ Escribir el código DDL y DML en MySQL permitió ver cómo el modelo se convierte en una base de datos que funciona. Las restricciones PRIMARY KEY y FOREIGN KEY garantizan la integridad referencial: no se puede registrar un vehículo de un cliente que no existe ni insertar datos en un orden incorrecto, por lo que las tablas padre se cargan antes que las hijas. Las restricciones NOT NULL, UNIQUE, DEFAULT y CHECK, como la que limita el estado de una orden a PENDIENTE, EN_PROCESO, FINALIZADO o ENTREGADO, llevan las reglas del taller a la base de datos y evitan datos inválidos desde el origen. También fue relevante elegir el tipo de dato adecuado, por ejemplo DECIMAL para los montos de dinero, y definir las acciones ON DELETE y ON UPDATE en cada clave foránea. Con esto se cumple el segundo objetivo específico.
+
+> 3️⃣ El álgebra relacional ayudó a plantear cada consulta paso a paso antes de escribirla en SQL: primero qué tablas se reúnen, luego qué filas se seleccionan y al final qué columnas se muestran. Cada operador tiene un equivalente directo: la selección corresponde a WHERE, la proyección a SELECT, la reunión natural a JOIN y la diferencia a NOT IN o NOT EXISTS. La división no tiene equivalente directo en MySQL y se resolvió con un doble NOT EXISTS, lo que hizo evidente la diferencia entre el álgebra formal y el lenguaje SQL. Las consultas más útiles para el taller fueron las que combinan varias tablas, como saber qué mecánico atendió qué vehículo, y las de diferencia y división, que permiten detectar casos como los mecánicos sin órdenes en proceso o las órdenes que usaron todos los repuestos de un proveedor. Probar las consultas con datos de ejemplo permitió comprobar que los resultados eran los esperados.
+
+
+---
+
+<a id="bibliografia"></a>
+## 📚 Bibliografia
+
 [1] P. P.-S. Chen, “The entity-relationship model—toward a unified view of data,” ACM Trans. Database Syst., vol. 1, no. 1, pp. 9–36, Mar. 1976.
-[2] E. F. Codd, “A relational model of data for large shared data banks,” Commun. ACM, vol. 13, no. 6, pp. 377–387, Jun. 1970.
 
+[2] E. F. Codd, “A relational model of data for large shared data banks,” Commun. ACM, vol. 13, no. 6, pp. 377–387, Jun. 1970.
