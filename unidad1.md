@@ -1,3 +1,3 @@
-[Ejercicios Propuestos](ejercicios.md)
+- [Ejercicios Propuestos](ejercicios.md)
 
-[Proyecto](informe.md)
+- [Proyecto](informe.md)
