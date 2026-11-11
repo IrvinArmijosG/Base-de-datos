@@ -8,11 +8,11 @@ Una aerolínea opera vuelos (cada uno con número, fecha, origen y destino), cad
 
 ### Diagrama Entidad-Relación
 
-![Ejercicio 4 - Diagrama Entidad-Relación](../imagenes/ejercicio4_entidad_relacion.png)
+![Ejercicio 4 - Diagrama Entidad-Relación](../imageness/ejercicio4_entidad_relacion.png)
 
 ### Diagrama Relacional
 
-![Ejercicio 4 - Diagrama Relacional](../imagenes/ejercicio4_relacional.png)
+![Ejercicio 4 - Diagrama Relacional](../imageness/ejercicio4_relacional.png)
 
 ### Código SQL
 
