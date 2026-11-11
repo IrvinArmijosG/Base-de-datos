@@ -23,18 +23,14 @@ Diseñar e implementar una base de datos relacional para la gestión integral de
 ### 4.1. Modelo Entidad-Relación
 
 
+<img width="5744" height="3464" alt="fig1_diagrama_er (1)" src="https://github.com/user-attachments/assets/1b497ca0-a513-4421-990a-73ed8fbd75e8" />
 
-![Figura 1. Diagrama Entidad-Relación](imagenes/fig1_diagrama_er.png)
 
 *Figura 1. Diagrama Entidad-Relación del Sistema de Base de Datos relacional para la Gestión Operativa y Control de Inventarios de un Taller Mecánico Automotriz*
 
 ### 4.2. Modelo Relacional
 
-![Figura 2. Modelo relacional](imagenes/fig2_modelo_relacional.png)
-
-
-
-
+<img width="5752" height="2488" alt="fig2_modelo_relacional (1)" src="https://github.com/user-attachments/assets/3bc7ad8f-447c-4dd0-b70b-d23a8533c195" />
 
 
 
@@ -46,7 +42,7 @@ Diseñar e implementar una base de datos relacional para la gestión integral de
 
 ### 5.1. Creación de Tablas (DDL)
 
-Presentar el código SQL correspondiente a la creación de al menos 3 tablas representativas del sistema. El código debe incluir:
+Presentación del código SQL que incluye:
 
 - Sentencia CREATE TABLE con nombre de tabla en mayusculas o siguiendo la convencion del equipo.
 - Definicion de columnas con tipos de datos apropiados (INT, VARCHAR, DATE, DECIMAL, etc.).
@@ -207,9 +203,9 @@ CREATE TABLE REPUESTO_UTILIZADO (
 
 ### 5.2. Inserción de Datos (DML)
 
-Incluir sentencias INSERT INTO con datos de ejemplo representativos para al menos 3 tablas. Los datos deben ser coherentes entre sí (las claves foráneas deben corresponder a registros existentes) y deben cubrir casos variados para que las consultas posteriores sean significativas.
-
 ```sql
+-- --  SISTEMA DE TALLER MECANICO
+USE taller_mecanico;
 INSERT INTO CLIENTE (primer_nombre, segundo_nombre, apellido_paterno, apellido_materno, direccion)
 VALUES
   ('Juan', 'Carlos', 'Pérez', 'Ramírez', 'Av. Universitaria 12-45'),
@@ -218,6 +214,40 @@ VALUES
   ('Ana', 'Lucía', 'Vargas', 'Mora', 'Av. Manuel Agustín Aguirre 8-20'),
   ('Pedro', NULL, 'Ordóñez', 'Salinas', 'Ciudadela Zamora Huayco'),
   ('Carla', 'Estefanía', 'Cueva', 'Armijos', 'Av. Orillas del Zamora 3-15');
+
+INSERT INTO MECANICO (nombre, apellido, especialidad)
+VALUES
+  ('Carlos', 'Mendoza', 'Motor'),
+  ('Jorge', 'Salazar', 'Frenos y suspensión'),
+  ('Diego', 'Paredes', 'Sistema eléctrico'),
+  ('Marco', 'Villavicencio', 'Transmisión'),
+  ('Andrea', 'Loaiza', 'Diagnóstico computarizado');
+
+INSERT INTO SERVICIO (nombre, descripcion)
+VALUES
+  ('Cambio de aceite y filtro', 'Reemplazo del aceite de motor y del filtro de aceite'),
+  ('Cambio de pastillas de freno', 'Reemplazo de pastillas y revisión de discos'),
+  ('Diagnóstico computarizado', 'Lectura de códigos de falla con escáner automotriz'),
+  ('Reparación del sistema eléctrico', 'Revisión de batería, alternador y arranque'),
+  ('Alineación y balanceo', 'Alineación de dirección y balanceo de las cuatro ruedas'),
+  ('Reparación de transmisión', 'Ajuste o reparación de caja de cambios y embrague'),
+  ('Cambio de amortiguadores', 'Reemplazo de amortiguadores de la suspensión');
+
+INSERT INTO PROVEEDOR (nombre)
+VALUES
+  ('Autopartes Loja'),
+  ('Frenos y Embragues S.A.'),
+  ('ElectroAuto Ecuador'),
+  ('Lubricantes Andinos'),          -- id_proveedor = 4 (se usa en la consulta 5)
+  ('Importadora Mecánica Cuenca');
+INSERT INTO TELEFONO_CLIENTE (id_cliente, telefono)
+VALUES
+  (1, '0991234567'),
+  (1, '072570123'),
+  (2, '0987654321'),
+  (3, '0998765432'),
+  (4, '0961122334'),
+  (5, '0979988776');
 
 INSERT INTO VEHICULO (placa, marca, modelo, anio, kilometraje, id_cliente)
 VALUES
@@ -228,16 +258,70 @@ VALUES
   ('LGH-7890', 'Nissan', 'Frontier', 2019, 98000, 5),
   ('LIJ-2468', 'Mazda', 'CX-5', 2022, 15000, 1);
 
-INSERT INTO MECANICO (nombre, apellido, especialidad)
+INSERT INTO REPUESTO (nombre, stock, id_proveedor)
 VALUES
-  ('Carlos', 'Mendoza', 'Motor'),
-  ('Jorge', 'Salazar', 'Frenos y suspensión'),
-  ('Diego', 'Paredes', 'Sistema eléctrico'),
-  ('Marco', 'Villavicencio', 'Transmisión'),
-  ('Andrea', 'Loaiza', 'Diagnóstico computarizado');
+  ('Pastillas de freno delanteras', 25, 2),
+  ('Filtro de aceite', 40, 4),
+  ('Aceite de motor 10W-40', 60, 4),
+  ('Batería 12V 60Ah', 12, 3),
+  ('Bujías (juego x4)', 30, 1),
+  ('Amortiguador delantero', 10, 5),
+  ('Kit de embrague', 6, 2);
+
+INSERT INTO ORDEN_TRABAJO (fecha_ingreso, fecha_entrega, estado, motivo, diagnostico, placa)
+VALUES
+  ('2025-12-18', '2025-12-20', 'ENTREGADO',  'Mantenimiento preventivo de 85.000 km', 'Aceite y filtro con desgaste normal', 'LBA-1234'),
+  ('2026-02-03', '2026-02-05', 'ENTREGADO',  'Ruido al frenar', 'Pastillas delanteras desgastadas', 'LCD-5678'),
+  ('2026-03-10', NULL,         'EN_PROCESO', 'El vehículo no enciende', 'Batería descargada y falla en el sistema de arranque', 'LAB-9012'),
+  ('2026-03-25', '2026-03-28', 'ENTREGADO',  'Luz de check engine encendida', 'Bujías desgastadas, se reemplazaron', 'LEF-3456'),
+  ('2026-04-08', NULL,         'EN_PROCESO', 'Dificultad al cambiar de marcha', 'Desgaste del embrague y fuga de aceite en la caja', 'LGH-7890'),
+  ('2026-04-20', NULL,         'FINALIZADO', 'Vibración en la suspensión delantera', 'Amortiguadores en mal estado', 'LIJ-2468'),
+  ('2026-05-04', NULL,         'PENDIENTE',  'Revisión general antes de un viaje', NULL, 'LCD-5678');
+
+-- Relacion M:N "Atiende": 8 participaciones (la orden 7 aun no tiene mecanico)
+INSERT INTO ATIENDE (id_mecanico, id_orden)
+VALUES
+  (1, 1), (1, 3), (1, 5),   -- Carlos: LBA-1234, LAB-9012 y LGH-7890
+  (3, 3),                   -- Diego (electrico) apoya la orden 3
+  (4, 5),                   -- Marco (transmision) apoya la orden 5
+  (2, 2), (2, 6),           -- Jorge: frenos y suspension
+  (5, 4);                   -- Andrea: diagnostico
+
+-- Entidad debil: servicios realizados en cada orden (costo unitario)
+INSERT INTO DETALLE_SERVICIO (id_orden, id_detalle, cantidad, costo, id_servicio)
+VALUES
+  (1, 1, 1,  35.00, 1),
+  (2, 1, 1,  60.00, 2),
+  (2, 2, 1,  25.00, 5),
+  (3, 1, 1,  40.00, 3),
+  (3, 2, 1,  90.00, 4),
+  (4, 1, 1,  40.00, 3),
+  (5, 1, 1, 350.00, 6),
+  (6, 1, 2,  45.00, 7),     -- 2 amortiguadores
+  (6, 2, 1,  25.00, 5);
+INSERT INTO REPUESTO_UTILIZADO (id_orden, id_repuesto, cantidad)
+VALUES
+  (1, 2, 1),   -- filtro de aceite
+  (1, 3, 4),   -- aceite 10W-40
+  (2, 1, 1),   -- pastillas de freno
+  (3, 4, 1),   -- bateria
+  (4, 5, 1),   -- bujias
+  (5, 3, 6),   -- aceite 10W-40 (sin filtro)
+  (5, 7, 1),   -- kit de embrague
+  (6, 6, 2);   -- amortiguadores
+
+INSERT INTO PAGO (fecha, monto, metodo_pago, id_orden)
+VALUES
+  ('2025-12-20',  35.00, 'EFECTIVO',      1),
+  ('2026-02-03',  50.00, 'EFECTIVO',      2),   -- anticipo
+  ('2026-02-05',  35.00, 'TARJETA',       2),   -- saldo
+  ('2026-03-12',  50.00, 'TRANSFERENCIA', 3),   -- anticipo (orden en proceso)
+  ('2026-03-28',  40.00, 'TARJETA',       4),
+  ('2026-04-10', 150.00, 'TRANSFERENCIA', 5);   -- anticipo (orden en proceso)
+
 ```
 
-***Recomendacion:*** *Insertar minimo 5 registros por tabla para que las consultas de algebra relacional tengan resultados significativos y demostrables.*
+
 
 ---
 
@@ -393,4 +477,7 @@ Se buscan las órdenes que usaron todos los repuestos del proveedor 4 (el filtro
 - Escribir el código DDL y DML en MySQL permitió ver cómo el modelo se convierte en una base de datos que funciona. Las restricciones PRIMARY KEY y FOREIGN KEY garantizan la integridad referencial: no se puede registrar un vehículo de un cliente que no existe ni insertar datos en un orden incorrecto, por lo que las tablas padre se cargan antes que las hijas. Las restricciones NOT NULL, UNIQUE, DEFAULT y CHECK, como la que limita el estado de una orden a PENDIENTE, EN_PROCESO, FINALIZADO o ENTREGADO, llevan las reglas del taller a la base de datos y evitan datos inválidos desde el origen. También fue relevante elegir el tipo de dato adecuado, por ejemplo DECIMAL para los montos de dinero, y definir las acciones ON DELETE y ON UPDATE en cada clave foránea. Con esto se cumple el segundo objetivo específico.
 - El álgebra relacional ayudó a plantear cada consulta paso a paso antes de escribirla en SQL: primero qué tablas se reúnen, luego qué filas se seleccionan y al final qué columnas se muestran. Cada operador tiene un equivalente directo: la selección corresponde a WHERE, la proyección a SELECT, la reunión natural a JOIN y la diferencia a NOT IN o NOT EXISTS. La división no tiene equivalente directo en MySQL y se resolvió con un doble NOT EXISTS, lo que hizo evidente la diferencia entre el álgebra formal y el lenguaje SQL. Las consultas más útiles para el taller fueron las que combinan varias tablas, como saber qué mecánico atendió qué vehículo, y las de diferencia y división, que permiten detectar casos como los mecánicos sin órdenes en proceso o las órdenes que usaron todos los repuestos de un proveedor. Probar las consultas con datos de ejemplo permitió comprobar que los resultados eran los esperados.
 
+# Bibliografia
+[1] P. P.-S. Chen, “The entity-relationship model—toward a unified view of data,” ACM Trans. Database Syst., vol. 1, no. 1, pp. 9–36, Mar. 1976.
+[2] E. F. Codd, “A relational model of data for large shared data banks,” Commun. ACM, vol. 13, no. 6, pp. 377–387, Jun. 1970.
 
