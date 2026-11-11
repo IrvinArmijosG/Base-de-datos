@@ -12,11 +12,11 @@ Una empresa discográfica necesita modelar los datos sobre sus diferentes recurs
 
 ### Diagrama Entidad-Relación
 
-![Ejercicio 5 - Diagrama Entidad-Relación](../imagenes/ejercicio5_entidad_relacion.png)
+![Ejercicio 5 - Diagrama Entidad-Relación](../imageness/ejercicio5_entidad_relacion.png)
 
 ### Diagrama Relacional
 
-![Ejercicio 5 - Diagrama Relacional](../imagenes/ejercicio5_relacional.png)
+![Ejercicio 5 - Diagrama Relacional](../imageness/ejercicio5_relacional.png)
 
 ### Código SQL
 
