@@ -8,11 +8,11 @@ Una biblioteca registra libros y autores. Un libro puede tener varios autores y 
 
 ### Diagrama Entidad-Relación
 
-![Ejercicio 1 - Diagrama Entidad-Relación](../imagenes/ejercicio1_entidad_relacion.png)
+![Ejercicio 1 - Diagrama Entidad-Relación](../imageness/ejercicio1_entidad_relacion.png)
 
 ### Diagrama Relacional
 
-![Ejercicio 1 - Diagrama Relacional](../imagenes/ejercicio1_relacional.png)
+![Ejercicio 1 - Diagrama Relacional](../imageness/ejercicio1_relacional.png)
 
 ### Código SQL
 
