@@ -8,11 +8,11 @@ Los clientes realizan pedidos que contienen varios platos con distinta cantidad.
 
 ### Diagrama Entidad-Relación
 
-![Ejercicio 2 - Diagrama Entidad-Relación](../imagenes/ejercicio2_entidad_relacion.png)
+![Ejercicio 2 - Diagrama Entidad-Relación](../imageness/ejercicio2_entidad_relacion.png)
 
 ### Diagrama Relacional
 
-![Ejercicio 2 - Diagrama Relacional](../imagenes/ejercicio2_relacional.png)
+![Ejercicio 2 - Diagrama Relacional](../imageness/ejercicio2_relacional.png)
 
 ### Código SQL
 
