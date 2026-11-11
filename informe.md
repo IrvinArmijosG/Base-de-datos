@@ -16,7 +16,7 @@ Diseñar e implementar una base de datos relacional para la gestión integral de
 ### 3.2. Objetivos Específicos
 
 - Elaborar el modelado conceptual y lógico de la base de datos mediante el diagrama Entidad-Relación (notación Chen) y el esquema relacional, identificando con precisión las entidades, atributos, claves primarias, claves foráneas y cardinalidades requeridas para el taller mecánico.
-- Implementar la base de datos en MySQL mediante sentencias DDL y DML, creando 12 tablas con sus restricciones de integridad (PRIMARY KEY, FOREIGN KEY, NOT NULL, UNIQUE, DEFAULT y CHECK) y cargando datos de ejemplo coherentes, y validar su funcionamiento con cinco consultas formuladas en álgebra relacional y traducidas a SQL que empleen distintos operadores (selección, proyección, reunión natural, diferencia y división).
+- Validar la base de datos mediante cinco consultas formuladas en álgebra relacional y traducidas a SQL, que empleen selección, proyección, reunión natural, diferencia y división.
 
 ## 4. MODELOS CONCEPTUALES DE BASES DE DATOS
 
@@ -31,6 +31,11 @@ Diseñar e implementar una base de datos relacional para la gestión integral de
 ### 4.2. Modelo Relacional
 
 ![Figura 2. Modelo relacional](imagenes/fig2_modelo_relacional.png)
+
+
+
+
+
 
 
 *Figura 2. Modelo relacional del Sistema de Base de Datos relacional para la Gestión Operativa y Control de Inventarios de un Taller Mecánico Automotriz*
