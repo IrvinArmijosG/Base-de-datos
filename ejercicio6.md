@@ -8,11 +8,11 @@ Se desea crear una aplicación para la gestión de una tienda informática. La t
 
 ### Diagrama Entidad-Relación
 
-![Ejercicio 6 - Diagrama Entidad-Relación](../imagenes/ejercicio6_entidad_relacion.png)
+![Ejercicio 6 - Diagrama Entidad-Relación](../imageness/ejercicio6_entidad_relacion.png)
 
 ### Diagrama Relacional
 
-![Ejercicio 6 - Diagrama Relacional](../imagenes/ejercicio6_relacional.png)
+![Ejercicio 6 - Diagrama Relacional](../imageness/ejercicio6_relacional.png)
 
 ### Código SQL
 
