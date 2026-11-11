@@ -22,7 +22,7 @@ Diseñar e implementar una base de datos relacional para la gestión integral de
 
 ### 4.1. Modelo Entidad-Relación
 
-Enlace al diagrama: <https://drive.google.com/file/d/1MLvO1K7p27v2XCYNZ7Tb6md9DZQQ3Idw/view?usp=sharing>
+
 
 ![Figura 1. Diagrama Entidad-Relación](imagenes/fig1_diagrama_er.png)
 
