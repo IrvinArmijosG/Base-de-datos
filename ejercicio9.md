@@ -23,11 +23,11 @@
 
 ### Diagrama Entidad-Relación
 
-![Ejercicio 9 - Diagrama Entidad-Relación](../imagenes/ejercicio9_entidad_relacion.png)
+![Ejercicio 9 - Diagrama Entidad-Relación](../imageness/ejercicio9_entidad_relacion.png)
 
 ### Diagrama Relacional
 
-![Ejercicio 9 - Diagrama Relacional](../imagenes/ejercicio9_relacional.png)
+![Ejercicio 9 - Diagrama Relacional](../imageness/ejercicio9_relacional.png)
 
 ### Código SQL
 
