@@ -32,6 +32,7 @@ Diseñar e implementar una base de datos relacional para la gestión integral de
 
 ![Figura 2. Modelo relacional](imagenes/fig2_modelo_relacional.png)
 
+
 *Figura 2. Modelo relacional del Sistema de Base de Datos relacional para la Gestión Operativa y Control de Inventarios de un Taller Mecánico Automotriz*
 
 ---
